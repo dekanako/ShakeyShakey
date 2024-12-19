@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:keepScreenOn="true"
+    android:paddingTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/discoverer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Discoverer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/advertiser"
+        android:layout_width="116dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:text="Advertiser"
+        app:layout_constraintEnd_toEndOf="@+id/discoverer"
+        app:layout_constraintStart_toStartOf="@+id/discoverer"
+        app:layout_constraintTop_toBottomOf="@+id/discoverer" />
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/sendMessage"
+        android:layout_width="116dp"
+        android:layout_height="42dp"
+        android:text="SendMessage"
+        app:layout_constraintEnd_toEndOf="@+id/discoverer"
+        app:layout_constraintStart_toStartOf="@+id/discoverer"
+        app:layout_constraintTop_toBottomOf="@+id/advertiser" />
+
+    <LinearLayout
+        android:id="@+id/connections"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/discoverer"
+        app:layout_constraintTop_toTopOf="@+id/discoverer">
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Found Devices"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/discoverer"
+        app:layout_constraintTop_toBottomOf="@+id/connections" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
